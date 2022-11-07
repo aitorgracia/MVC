@@ -36,7 +36,6 @@ services:
       - db
     environment:
       - VIRTUAL_HOST=mvc.local,www.mvc.local
-    restart: always
     networks:
       - frontend
       - backend      
@@ -50,6 +49,7 @@ services:
       - PMA_HOST=db
       - VIRTUAL_HOST=phpmyadmin.docker
     networks:
+      - frontend
       - backend
 networks:
   frontend:
