@@ -13,15 +13,35 @@
 </head>
 <body>
 
-    <?php require "header.html"?>
+    <?php require_once "header2.html"?>
 
-        <h1>Bienvenido</h1>
-        <h4><a href="?method=close">Cerrar sesión</a></h4>
+        <h1>Tus contactos: </h1>
+        <?php   
+        
+                echo'<br>';
+                echo'<h3>Personas:</h3>';
+                foreach ($resultadop as $value) {
+                    echo"Nombre: $value[1] $value[2] Direccion: $value[3] Telefono: $value[4] <br>";
+                }
+                
+                echo'<br><br>';
 
-        <h4><a href="?method=close">Insertar XML</a></h4>
+                echo'<h3>Empresas:</h3>';
+                foreach ($resultadoe as $value) {
+                    echo"Nombre: $value[1] Direccion: $value[2] Telefono: $value[3] Correo: $value[4] <br>";
+                }
 
 
-        <?php require "footer.html"?>
+        ?>
 
-</body>
+        <h1>Actualizar un contacto </h1>
+        <form action="" method="post">
+                
+
+                
+        </form>
+
+        <?php require_once "footer.html"?>
+
+    </body>
 </html>
